@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import type {FormEvent} from 'react'
+import type {FormEvent} from 'react';
+import StringFormat from "./StringFormat";
 
 function SearchBox() {
   const [userStr, setUserStr] = useState('');
@@ -9,12 +10,8 @@ function SearchBox() {
     const {name} = event.target as typeof event.target & {
       name: {value: string}
     };
-    const str = name.value;
-    const replaced = str.replace(/[^a-z0-9]/gi, ' ');
-    setUserStr(replaced);
-    //console.log(replaced);
+    setUserStr(StringFormat(name.value));
   }
-
 
   return (
     <div>

@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bing</h1>
+      <h1>String Formatter</h1>
       <SearchBox></SearchBox>
     </div>
   );
